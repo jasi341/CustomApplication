@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:textColor="@color/black"
+            android:text="Primary Button Long"
+            android:textSize="15sp"/>
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn1"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:layout_margin="5dp"
+            android:text="@string/save_it"
+            android:textColor="@color/white" />
+
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn2"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:textColor="@color/white"
+            android:layout_margin="5dp"
+            android:text="@string/save_it"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+           />
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn3"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:layout_margin="5dp"
+            android:text="@string/save_it"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/disabled"
+           />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_margin="5dp"
+
+            android:text="Primary Button long icon"
+            android:textSize="15sp"/>
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:drawableTint="@color/white"
+            android:text="@string/save_it"
+            android:textSize="16sp"
+            android:layout_margin="5dp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:drawablePadding="5dp"
+            android:textColor="@color/white"
+            app:drawableLeftCompat="@drawable/ic_baseline_location_on_24"/>
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/save_it"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:drawablePadding="5dp"
+            android:textColor="@color/white"
+            android:drawableTint="@color/white"
+            app:drawableLeftCompat="@drawable/ic_baseline_location_on_24"/>
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_it"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:drawablePadding="5dp"
+            android:textColor="@color/disabled"
+            android:drawableTint="@color/disabled"
+            android:layout_margin="5dp"
+            app:drawableLeftCompat="@drawable/ic_baseline_location_on_24"/>
+
+        <TextView
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Primary Button long tail icon"
+            android:textSize="15sp"/>
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_it"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:drawablePadding="5dp"
+            android:layout_margin="5dp"
+            android:textColor="@color/white"
+            android:drawableTint="@color/white"
+            app:drawableRightCompat="@drawable/ic_baseline_location_on_24"/>
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_it"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:drawablePadding="5dp"
+            android:layout_margin="5dp"
+            android:textColor="@color/white"
+            android:drawableTint="@color/white"
+            app:drawableRightCompat="@drawable/ic_baseline_location_on_24"/>
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/save_it"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/disabled"
+            android:textColor="@color/disabled"
+            app:drawableRightCompat="@drawable/ic_baseline_location_on_24"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Secondary Button Long"
+            android:layout_margin="5dp"
+            android:textSize="15sp"/>
+
+        <com.example.customlibrary.CustomButton1
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:id="@+id/btn10"
+            android:layout_margin="5dp"
+            android:text="@string/save_it"
+            android:textColor="@color/orange"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:drawablePadding="5dp"
+            />
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn11"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            android:textColor="@color/orange"
+            android:layout_margin="5dp"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:drawablePadding="5dp"
+            />
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn12"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            android:layout_margin="5dp"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:drawablePadding="5dp"
+            android:textColor="@color/disabled"
+          />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Secondary Button Long Icon"
+            android:layout_margin="5dp"
+            android:textSize="15sp"/>
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/orange"
+            android:layout_margin="5dp"
+            android:text="@string/save_it"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/orange"
+            app:drawableLeftCompat="@drawable/ic_baseline_location_on_24"
+           />
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/orange"
+            android:layout_margin="5dp"
+            android:text="@string/save_it"
+            android:textSize="16sp"
+            android:drawableTint="@color/orange"
+            app:drawableLeftCompat="@drawable/ic_baseline_location_on_24"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            />
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/disabled"
+            android:layout_margin="5dp"
+            android:text="@string/save_it"
+            android:drawableTint="@color/disabled"
+            app:drawableLeftCompat="@drawable/ic_baseline_location_on_24"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Secondary Button Long Tail Icon"
+            android:layout_margin="5dp"
+            android:textSize="15sp"/>
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/orange"
+            android:layout_margin="5dp"
+            android:text="@string/save_it"
+            android:textSize="16sp"
+            android:drawableTint="@color/orange"
+            app:drawableRightCompat="@drawable/ic_baseline_location_on_24"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:drawablePadding="5dp"
+            />
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/orange"
+            android:layout_margin="5dp"
+            android:text="@string/save_it"
+            android:textSize="16sp"
+            android:drawableTint="@color/orange"
+            app:drawableRightCompat="@drawable/ic_baseline_location_on_24"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:drawablePadding="5dp"
+            />
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/disabled"
+            android:layout_margin="5dp"
+            android:text="@string/save_it"
+            android:textSize="16sp"
+            android:drawableTint="@color/disabled"
+            app:drawableRightCompat="@drawable/ic_baseline_location_on_24"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:drawablePadding="5dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#808080"
+            android:textStyle="bold"
+            android:text="Secondary Button Long gray same as secondary button long"
+            android:layout_margin="5dp"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Tertiary Buttons"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="15sp"/>
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:drawablePadding="5dp"
+            android:layout_margin="5dp"
+            android:text="@string/save_it"
+            android:textColor="@color/orange" />
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:drawablePadding="5dp"
+            android:layout_margin="5dp"
+            android:text="@string/save_it"
+            android:textColor="@color/orange" />
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:drawablePadding="5dp"
+            android:layout_margin="5dp"
+            android:text="@string/save_it"
+            android:textColor="@color/disabled" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Primary Button Short"
+            android:layout_margin="5dp"
+            android:textSize="15sp"/>
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn22"
+            android:layout_width="156dp"
+            android:layout_height="48dp"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:layout_margin="5dp"
+            android:text="@string/save_it"
+            android:textColor="@color/white" />
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn23"
+            android:layout_width="156dp"
+            android:layout_height="48dp"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:layout_margin="5dp"
+            android:text="@string/save_it"
+            android:textColor="@color/white" />
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn24"
+            android:layout_width="156dp"
+            android:layout_height="48dp"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:layout_margin="5dp"
+            android:text="@string/save_it"
+            android:textColor="@color/disabled" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Secondary Button Short"
+            android:layout_margin="5dp"
+            android:textSize="15sp"/>
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn25"
+            android:layout_width="156dp"
+            android:layout_height="48dp"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:layout_margin="5dp"
+            android:text="@string/save_it"
+            android:textColor="@color/orange" />
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn26"
+            android:layout_width="156dp"
+            android:layout_height="48dp"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:layout_margin="5dp"
+            android:text="@string/save_it"
+            android:textColor="@color/orange" />
+
+        <com.example.customlibrary.CustomButton1
+            android:id="@+id/btn27"
+            android:layout_width="156dp"
+            android:layout_height="48dp"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:layout_margin="5dp"
+            android:text="@string/save_it"
+            android:textColor="@color/disabled" />
+
+        <TextView
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Secondary button short gray same as sec button short gray"
+            android:textSize="15sp"/>
+
+
+    <!--    <FrameLayout
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            style="?android:attr/buttonStyle"
+            android:layout_margin="15dp"
+            android:background="@drawable/btn_gredient">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="328dp"
+                android:layout_height="48dp"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/loader"
+                app:lottie_autoPlay="true"/>
+        </FrameLayout>
+    -->
+
+        <com.example.customlibrary.LoadingBtn
+            android:id="@+id/btn28"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            app:lottie_rawRes="@raw/loader"
+            app:lottie_loop="true"
+            android:padding="10dp"
+            android:backgroundTint="@color/orange"
+            style="?android:attr/buttonStyle"
+            app:lottie_autoPlay="true"/>
+
+    </LinearLayout>
+</ScrollView>
+
+
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomButton1">
+       <!--Common attributes -->
+        <attr name="drawableLeftCompat" format="reference"/>
+        <attr name="drawableRightCompat" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="LoadingBtn">
+        <attr name="lottie_rawRes" format="reference"/>
+        <attr name="lottie_autoPlay" format="boolean"/>
+        <attr name="lottie_loop" format="boolean"/>
+    </declare-styleable>
+
+</resources>
