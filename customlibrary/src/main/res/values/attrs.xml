@@ -13,4 +13,6 @@
         <attr name="lottie_loop" format="boolean"/>
     </declare-styleable>
 
+    <declare-styleable name="MaterialButtons"/>
+
 </resources>

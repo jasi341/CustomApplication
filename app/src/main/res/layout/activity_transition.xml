@@ -8,15 +8,13 @@
     android:background="#ececec"
     tools:context=".TransitionActivity">
 
-    <com.example.customlibrary.CustomButton1
+    <com.example.customlibrary.MaterialButtons
         android:id="@+id/btn1"
         android:layout_width="328dp"
         android:layout_height="48dp"
-        android:layout_margin="5dp"
         android:text="@string/save_it"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textSize="16sp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,17 +23,26 @@
 
     <com.example.customlibrary.LoadingBtn
         android:id="@+id/btn2"
-        android:layout_width="328dp"
-        android:layout_height="52dp"
-        android:visibility="gone"
         app:lottie_rawRes="@raw/loader"
         app:lottie_loop="true"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:backgroundTint="@color/orange"
-        style="?android:attr/buttonStyle"
+        style="@style/button"
         app:lottie_autoPlay="true"/>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All Buttons Activity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

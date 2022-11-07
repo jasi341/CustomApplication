@@ -2,4 +2,5 @@
 <resources>
     <string name="app_name">Custom</string>
     <string name="save_it">सेव करें</string>
+    <string name="errorMessage" >एरर मैसेज</string>
 </resources>

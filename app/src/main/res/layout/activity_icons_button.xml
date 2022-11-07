@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    android:background="@color/white"
+    tools:context=".IconsButtonActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:textColor="@color/black"
+            android:text="Primary Button Long"
+            android:textSize="15sp"/>
+
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn1"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            android:layout_margin="5dp"
+            />
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn2"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            android:layout_margin="5dp"
+            />
+
+        <com.example.customlibrary.LoadingBtn
+            android:id="@+id/ld1"
+            app:lottie_rawRes="@raw/loader"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            style="@style/button"/>
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn3"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            android:layout_margin="5dp"
+            />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_margin="5dp"
+            android:text="Primary Button long icon"
+            android:textSize="15sp"/>
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn4"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            android:layout_margin="5dp"
+            app:icon="@drawable/ic_baseline_location_on_24"/>
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn5"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            android:layout_margin="5dp"
+            app:icon="@drawable/ic_baseline_location_on_24"/>
+
+        <com.example.customlibrary.LoadingBtn
+            android:id="@+id/ld2"
+            app:lottie_rawRes="@raw/loader"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            style="@style/button"/>
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn6"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            android:layout_margin="5dp"
+            app:icon="@drawable/ic_baseline_location_on_24"/>
+
+        <TextView
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Primary Button long tail icon"
+            android:textSize="15sp"/>
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn7"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            android:layout_margin="5dp"
+            app:icon="@drawable/ic_baseline_location_on_24"/>
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn8"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            android:layout_margin="5dp"
+            app:icon="@drawable/ic_baseline_location_on_24"/>
+
+        <com.example.customlibrary.LoadingBtn
+            android:id="@+id/ld3"
+            app:lottie_rawRes="@raw/loader"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            style="@style/button"/>
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn9"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            app:icon="@drawable/ic_baseline_location_on_24"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Secondary Button Long"
+            android:layout_margin="5dp"
+            android:textSize="15sp"/>
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn10"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            android:layout_margin="5dp"
+            />
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn11"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            android:layout_margin="5dp"
+            />
+
+        <com.example.customlibrary.LoadingBtn
+            android:id="@+id/ld4"
+            app:lottie_rawRes="@raw/loader2"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            style="@style/button"/>
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn12"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            android:layout_margin="5dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Secondary Button Long Icon"
+            android:layout_margin="5dp"
+            android:textSize="15sp"/>
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn13"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            app:icon="@drawable/ic_baseline_location_on_24"
+            android:layout_margin="5dp"
+            />
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn14"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            app:icon="@drawable/ic_baseline_location_on_24"
+            android:layout_margin="5dp"
+            />
+
+        <com.example.customlibrary.LoadingBtn
+            android:id="@+id/ld5"
+            app:lottie_rawRes="@raw/loader2"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            style="@style/button"/>
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn15"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            app:icon="@drawable/ic_baseline_location_on_24"
+            android:layout_margin="5dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Secondary Button Long Tail Icon"
+            android:layout_margin="5dp"
+            android:textSize="15sp"/>
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn16"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            app:icon="@drawable/ic_baseline_location_on_24"
+            android:layout_margin="5dp"
+            />
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn17"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            app:icon="@drawable/ic_baseline_location_on_24"
+            android:layout_margin="5dp"
+            />
+
+        <com.example.customlibrary.LoadingBtn
+            android:id="@+id/ld6"
+            app:lottie_rawRes="@raw/loader2"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            style="@style/button"/>
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn18"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            app:icon="@drawable/ic_baseline_location_on_24"
+            android:layout_margin="5dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Tertiary Buttons"
+            android:layout_margin="5dp"
+            android:textSize="15sp"/>
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn19"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            android:layout_margin="5dp"
+            />
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn20"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            android:layout_margin="5dp"
+            />
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn21"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            android:layout_margin="5dp"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Primary Button Short"
+            android:layout_margin="5dp"
+            android:textSize="15sp"/>
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn22"
+            android:layout_width="156dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            android:layout_margin="5dp"
+            />
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn23"
+            android:layout_width="156dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            android:layout_margin="5dp"
+            />
+
+        <com.example.customlibrary.LoadingBtn
+            android:id="@+id/ld7"
+            app:lottie_rawRes="@raw/loader"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            style="@style/button1"/>
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn24"
+            android:layout_width="156dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            android:layout_margin="5dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Secondary Button Short"
+            android:layout_margin="5dp"
+            android:textSize="15sp"/>
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn25"
+            android:layout_width="156dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            android:layout_margin="5dp"
+            />
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn26"
+            android:layout_width="156dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            android:layout_margin="5dp"
+            />
+
+        <com.example.customlibrary.LoadingBtn
+            android:id="@+id/ld8"
+            app:lottie_rawRes="@raw/loader2"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            style="@style/button1"/>
+
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn27"
+            android:layout_width="156dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            android:layout_margin="5dp"
+            />
+
+    </LinearLayout>
+</ScrollView>
+
+
+
