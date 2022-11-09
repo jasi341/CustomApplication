@@ -47,6 +47,8 @@ class MaterialButtons(context: Context, attrs:AttributeSet) : MaterialButton(con
         setBackgroundResource(R.drawable.btn_gredient)
         iconGravity = ICON_GRAVITY_TEXT_START
         textSize = 16f
+        iconSize  = 52
+        iconPadding = 5
         backgroundTintMode = null
         setIconTintResource(R.color.white)
         textAlignment = TEXT_ALIGNMENT_CENTER
@@ -59,6 +61,8 @@ class MaterialButtons(context: Context, attrs:AttributeSet) : MaterialButton(con
         setBackgroundResource(R.drawable.btn_clicked)
         iconGravity = ICON_GRAVITY_TEXT_START
         textSize = 16f
+        iconSize  = 52
+        iconPadding = 5
         backgroundTintMode = null
         setIconTintResource(R.color.white)
         textAlignment = TEXT_ALIGNMENT_CENTER
@@ -70,6 +74,8 @@ class MaterialButtons(context: Context, attrs:AttributeSet) : MaterialButton(con
         setBackgroundResource(R.drawable.btn_disabled)
         iconGravity = ICON_GRAVITY_TEXT_START
         textSize = 16f
+        iconSize  = 52
+        iconPadding = 5
         backgroundTintMode = null
         setIconTintResource(R.color.disabled_text)
         textAlignment = TEXT_ALIGNMENT_CENTER
@@ -83,6 +89,8 @@ class MaterialButtons(context: Context, attrs:AttributeSet) : MaterialButton(con
         setTextColor(ContextCompat.getColor(mContext,R.color.white))
         iconGravity = ICON_GRAVITY_TEXT_END
         textSize = 16f
+        iconSize  = 52
+        iconPadding = 5
         backgroundTintMode = null
         setIconTintResource(R.color.white)
         textAlignment = TEXT_ALIGNMENT_CENTER
@@ -95,6 +103,8 @@ class MaterialButtons(context: Context, attrs:AttributeSet) : MaterialButton(con
         setTextColor(ContextCompat.getColor(mContext,R.color.white))
         iconGravity = ICON_GRAVITY_TEXT_END
         textSize = 16f
+        iconSize  = 52
+        iconPadding = 5
         backgroundTintMode = null
         setIconTintResource(R.color.white)
         textAlignment = TEXT_ALIGNMENT_CENTER
@@ -106,7 +116,9 @@ class MaterialButtons(context: Context, attrs:AttributeSet) : MaterialButton(con
         setBackgroundResource(R.drawable.btn_disabled)
         iconGravity = ICON_GRAVITY_TEXT_END
         textSize = 16f
-        backgroundTintMode = null
+        iconSize  = 52
+        iconPadding = 5
+        backgroundTintMode= null
         setIconTintResource(R.color.disabled_text)
         textAlignment = TEXT_ALIGNMENT_CENTER
         setTextColor(ContextCompat.getColor(mContext,R.color.disabled_text))
@@ -116,7 +128,7 @@ class MaterialButtons(context: Context, attrs:AttributeSet) : MaterialButton(con
     //Neutral Secondary button long
     fun secondaryButtonLongNeutral(){
         setBackgroundResource(R.drawable.btn_sec_neutral)
-        setTextColor( resources.getColor(R.color.orange))
+        setTextColor( ContextCompat.getColor(mContext,R.color.orange))
         textSize = 14f
         backgroundTintMode = null
         textAlignment = TEXT_ALIGNMENT_CENTER
@@ -149,6 +161,8 @@ class MaterialButtons(context: Context, attrs:AttributeSet) : MaterialButton(con
         setTextColor(ContextCompat.getColor(mContext,R.color.orange))
         iconGravity = ICON_GRAVITY_TEXT_START
         textSize = 14f
+        iconSize  = 52
+        iconPadding = 5
         backgroundTintMode = null
         setIconTintResource(R.color.orange)
         textAlignment = TEXT_ALIGNMENT_CENTER
@@ -161,6 +175,8 @@ class MaterialButtons(context: Context, attrs:AttributeSet) : MaterialButton(con
         setTextColor(ContextCompat.getColor(mContext,R.color.orange))
         iconGravity = ICON_GRAVITY_TEXT_START
         textSize = 14f
+        iconSize  = 52
+        iconPadding = 5
         backgroundTintMode = null
         setIconTintResource(R.color.orange)
         textAlignment = TEXT_ALIGNMENT_CENTER
@@ -173,6 +189,8 @@ class MaterialButtons(context: Context, attrs:AttributeSet) : MaterialButton(con
         setTextColor(ContextCompat.getColor(mContext,R.color.disabled_text))
         iconGravity = ICON_GRAVITY_TEXT_START
         textSize = 14f
+        iconSize  = 52
+        iconPadding = 5
         backgroundTintMode = null
         setIconTintResource(R.color.disabled_text)
         textAlignment = TEXT_ALIGNMENT_CENTER
@@ -185,6 +203,8 @@ class MaterialButtons(context: Context, attrs:AttributeSet) : MaterialButton(con
         setTextColor(ContextCompat.getColor(mContext,R.color.orange))
         iconGravity = ICON_GRAVITY_TEXT_END
         textSize = 14f
+        iconSize  = 52
+        iconPadding = 5
         backgroundTintMode = null
         setIconTintResource(R.color.orange)
         textAlignment = TEXT_ALIGNMENT_CENTER
@@ -197,6 +217,8 @@ class MaterialButtons(context: Context, attrs:AttributeSet) : MaterialButton(con
         setTextColor(ContextCompat.getColor(mContext,R.color.orange))
         iconGravity = ICON_GRAVITY_TEXT_END
         textSize = 14f
+        iconSize  = 52
+        iconPadding = 5
         backgroundTintMode = null
         setIconTintResource(R.color.orange)
         textAlignment = TEXT_ALIGNMENT_CENTER
@@ -209,6 +231,8 @@ class MaterialButtons(context: Context, attrs:AttributeSet) : MaterialButton(con
         setTextColor( ContextCompat.getColor(mContext,R.color.disabled_text))
         iconGravity = ICON_GRAVITY_TEXT_END
         textSize = 14f
+        iconSize  = 52
+        iconPadding = 5
         backgroundTintMode = null
         setIconTintResource(R.color.disabled_text)
         textAlignment = TEXT_ALIGNMENT_CENTER

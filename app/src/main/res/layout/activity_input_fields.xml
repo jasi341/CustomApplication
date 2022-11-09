@@ -16,7 +16,7 @@
         android:hint="Mobile Number"
         app:hintTextColor="#555555"
         android:layout_margin="10dp"
-        app:startIconDrawable="@drawable/ic_baseline_location_on_24"
+        app:startIconDrawable="@drawable/ic_baseline_local_phone_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -28,6 +28,7 @@
             android:layout_height="match_parent"
             android:inputType="textPersonName|textNoSuggestions"
             android:maxLines="1"
+            android:drawablePadding="-9dp"
             android:textColor="@color/black"
             android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -35,7 +36,7 @@
     <TextView
         android:id="@+id/error"
         android:layout_width="63dp"
-        android:layout_margin="10dp"
+        android:layout_marginStart="26dp"
         android:visibility="gone"
         android:layout_height="16dp"
         android:text="@string/errorMessage"
