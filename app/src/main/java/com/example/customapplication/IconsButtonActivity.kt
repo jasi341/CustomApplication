@@ -73,6 +73,11 @@ class IconsButtonActivity : AppCompatActivity() {
         binding.btn27.secondaryButtonShortDisabled()
         binding.ld8.loadingSecondaryBtn()
 
+        //secondary Button Short Grey
+        binding.btn28.secondaryButtonShortGrayNeutral()
+        binding.btn29.secondaryButtonShortGrayClicked()
+        binding.ld9.loadingSecondaryBtnGray()
+
 
 
 

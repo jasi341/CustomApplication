@@ -5,10 +5,7 @@ import android.util.AttributeSet
 import androidx.core.content.ContextCompat
 import com.google.android.material.button.MaterialButton
 
-class MaterialButtons(context: Context, attrs:AttributeSet) : MaterialButton(context,attrs) {
-
-    private var mContext = context
-    private val a = mContext.obtainStyledAttributes(R.styleable.MaterialButtons)
+class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : MaterialButton(mContext,attrs) {
 
     //Neutral Primary button Long
     fun primaryButtonLongNeutral() {
@@ -241,18 +238,20 @@ class MaterialButtons(context: Context, attrs:AttributeSet) : MaterialButton(con
 
     //can be used for Neutral and clicked of tertiary buttons
     fun tertiaryButtonNeutral(){
-        setBackgroundResource(R.drawable.btn_trans)
+       // setBackgroundColor(ContextCompat.getColor(mContext,R.color.white))
         textAlignment = TEXT_ALIGNMENT_CENTER
         textSize = 14f
+        //transparent background
+        background= null
         backgroundTintMode = null
         setTextColor( ContextCompat.getColor(mContext,R.color.orange))
         invalidate()
     }
     // disabled tertiary Button
     fun tertiaryButtonDisabled(){
-        setBackgroundResource(R.drawable.btn_trans)
         textAlignment = TEXT_ALIGNMENT_CENTER
         textSize = 14f
+        background= null
         backgroundTintMode = null
         setTextColor( ContextCompat.getColor(mContext,R.color.disabled_text))
         invalidate()
@@ -315,6 +314,26 @@ class MaterialButtons(context: Context, attrs:AttributeSet) : MaterialButton(con
         textSize = 14f
         backgroundTintMode = null
         setTextColor( ContextCompat.getColor(mContext,R.color.disabled_text))
+        invalidate()
+    }
+
+    //Secondary button short gray
+    fun secondaryButtonShortGrayNeutral(){
+        setTextColor(ContextCompat.getColor(mContext,R.color.orange))
+        textAlignment = TEXT_ALIGNMENT_CENTER
+        textSize = 14f
+        backgroundTintMode = null
+        setBackgroundResource(R.drawable.btn_ui_sec_short_gray)
+        invalidate()
+    }
+
+    //Secondary button short gray clicked
+    fun secondaryButtonShortGrayClicked(){
+        setTextColor(ContextCompat.getColor(mContext,R.color.orange))
+        textAlignment = TEXT_ALIGNMENT_CENTER
+        textSize = 14f
+        backgroundTintMode = null
+        setBackgroundResource(R.drawable.btn_ui_sec_gray_clicked)
         invalidate()
     }
 

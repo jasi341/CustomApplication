@@ -42,11 +42,11 @@
             />
 
         <com.example.customlibrary.LoadingBtn
-            android:id="@+id/ld1"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
             app:lottie_rawRes="@raw/loader"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            style="@style/button"/>
+            android:id="@+id/ld1"
+           />
 
         <com.example.customlibrary.MaterialButtons
             android:id="@+id/btn3"
@@ -84,10 +84,10 @@
 
         <com.example.customlibrary.LoadingBtn
             android:id="@+id/ld2"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
             app:lottie_rawRes="@raw/loader"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            style="@style/button"/>
+          />
 
         <com.example.customlibrary.MaterialButtons
             android:id="@+id/btn6"
@@ -123,10 +123,10 @@
 
         <com.example.customlibrary.LoadingBtn
             android:id="@+id/ld3"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
             app:lottie_rawRes="@raw/loader"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            style="@style/button"/>
+          />
 
         <com.example.customlibrary.MaterialButtons
             android:id="@+id/btn9"
@@ -163,9 +163,8 @@
         <com.example.customlibrary.LoadingBtn
             android:id="@+id/ld4"
             app:lottie_rawRes="@raw/loader2"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            style="@style/button"/>
+            android:layout_width="328dp"
+            android:layout_height="48dp"/>
 
         <com.example.customlibrary.MaterialButtons
             android:id="@+id/btn12"
@@ -203,10 +202,10 @@
 
         <com.example.customlibrary.LoadingBtn
             android:id="@+id/ld5"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
             app:lottie_rawRes="@raw/loader2"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            style="@style/button"/>
+        />
 
         <com.example.customlibrary.MaterialButtons
             android:id="@+id/btn15"
@@ -245,10 +244,10 @@
 
         <com.example.customlibrary.LoadingBtn
             android:id="@+id/ld6"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
             app:lottie_rawRes="@raw/loader2"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            style="@style/button"/>
+          />
 
         <com.example.customlibrary.MaterialButtons
             android:id="@+id/btn18"
@@ -319,9 +318,8 @@
         <com.example.customlibrary.LoadingBtn
             android:id="@+id/ld7"
             app:lottie_rawRes="@raw/loader"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            style="@style/button1"/>
+            android:layout_width="156dp"
+            android:layout_height="48dp"/>
 
         <com.example.customlibrary.MaterialButtons
             android:id="@+id/btn24"
@@ -357,10 +355,10 @@
 
         <com.example.customlibrary.LoadingBtn
             android:id="@+id/ld8"
+            android:layout_width="156dp"
+            android:layout_height="48dp"
             app:lottie_rawRes="@raw/loader2"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            style="@style/button1"/>
+           />
 
 
         <com.example.customlibrary.MaterialButtons
@@ -371,6 +369,38 @@
             android:layout_margin="5dp"
             />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Secondary Button Short Gray"
+            android:layout_margin="5dp"
+            android:textSize="15sp"/>
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn28"
+            android:layout_width="156dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            android:layout_margin="5dp"
+            />
+
+
+        <com.example.customlibrary.MaterialButtons
+            android:id="@+id/btn29"
+            android:layout_width="156dp"
+            android:layout_height="48dp"
+            android:text="@string/save_it"
+            android:layout_margin="5dp"
+            />
+
+        <com.example.customlibrary.LoadingBtn
+            android:id="@+id/ld9"
+            android:layout_width="156dp"
+            android:layout_height="48dp"
+            app:lottie_rawRes="@raw/loader2"
+            android:layout_margin="5dp"
+          />
     </LinearLayout>
 </ScrollView>
 

@@ -28,6 +28,8 @@ class InputFieldsActivity : AppCompatActivity() {
             val mobile =binding.textInputEditText.text.toString()
 
             if (mobile=="sjasmeet438@gmail.com"){
+                binding.textField.error =""
+
 
                 binding.error.visibility = View.VISIBLE
                 binding.textField.boxStrokeColor= ContextCompat.getColor(this,R.color.disabled)
