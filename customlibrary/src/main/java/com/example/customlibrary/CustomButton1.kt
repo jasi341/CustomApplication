@@ -159,14 +159,14 @@ class CustomButton1(context: Context,attrs:AttributeSet): AppCompatButton(contex
         invalidate()
     }
 
-    //can be used for all kinds of tertiary buttons
-    fun tertiaryButton(){
-        setBackgroundResource(R.drawable.btn_trans)
-        setTextColor( resources.getColor(R.color.white))
-        setPadding(385,0,385,0)
-        val drawableRightCompat = a.getDrawable(R.styleable.CustomButton1_drawableRightCompat)
-        invalidate()
-    }
+//    //can be used for all kinds of tertiary buttons
+//    fun tertiaryButton(){
+//        setBackgroundResource(R.drawable.btn_trans)
+//        setTextColor( resources.getColor(R.color.white))
+//        setPadding(385,0,385,0)
+//        val drawableRightCompat = a.getDrawable(R.styleable.CustomButton1_drawableRightCompat)
+//        invalidate()
+  //  }
 
     //primary Button short neutral
     fun primaryButtonShortNeutral(){

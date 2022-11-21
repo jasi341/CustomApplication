@@ -39,10 +39,10 @@ class MainActivity : AppCompatActivity() {
         binding.btn16.secondaryButtonLongTailIconNeutral()
         binding.btn17.secondaryButtonLongTailIconClicked()
         binding.btn18.secondaryButtonLongTailIconDisabled()
-
-        binding.btn19.tertiaryButton()
-        binding.btn20.tertiaryButton()
-        binding.btn21.tertiaryButton()
+//
+//        binding.btn19.tertiaryButton()
+//        binding.btn20.tertiaryButton()
+//        binding.btn21.tertiaryButton()
 
         binding.btn22.primaryButtonShortNeutral()
         binding.btn23.primaryButtonShortClicked()

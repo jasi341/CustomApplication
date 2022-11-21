@@ -2,6 +2,7 @@ package com.example.customlibrary
 
 import android.content.Context
 import android.util.AttributeSet
+import androidx.appcompat.view.ContextThemeWrapper
 import androidx.core.content.ContextCompat
 import com.google.android.material.button.MaterialButton
 
@@ -14,6 +15,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
         backgroundTintMode = null
         textAlignment = TEXT_ALIGNMENT_CENTER
         setTextColor( ContextCompat.getColor(mContext,R.color.white))
+        ContextThemeWrapper(mContext, R. style.button1)
         invalidate()
     }
 
@@ -24,6 +26,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
         backgroundTintMode = null
         textAlignment = TEXT_ALIGNMENT_CENTER
         setTextColor( ContextCompat.getColor(mContext,R.color.white))
+        ContextThemeWrapper(mContext, R. style.button1)
         invalidate()
     }
 
@@ -31,6 +34,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
     fun primaryButtonLongDisabled() {
         setBackgroundResource(R.drawable.btn_disabled)
         textSize = 16f
+        ContextThemeWrapper(mContext, R. style.button1)
         backgroundTintMode = null
         textAlignment = TEXT_ALIGNMENT_CENTER
         setTextColor( ContextCompat.getColor(mContext,R.color.disabled_text))
@@ -42,6 +46,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
     fun primaryButtonLongIconNeutral(){
         setTextColor( ContextCompat.getColor(mContext,R.color.white))
         setBackgroundResource(R.drawable.btn_gredient)
+        ContextThemeWrapper(mContext, R. style.button1)
         iconGravity = ICON_GRAVITY_TEXT_START
         textSize = 16f
         iconSize  = 52
@@ -56,6 +61,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
     fun primaryButtonLongIconClicked(){
         setTextColor(ContextCompat.getColor(mContext,R.color.white))
         setBackgroundResource(R.drawable.btn_clicked)
+        ContextThemeWrapper(mContext, R. style.button1)
         iconGravity = ICON_GRAVITY_TEXT_START
         textSize = 16f
         iconSize  = 52
@@ -70,6 +76,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
     fun primaryButtonLongIconDisabled() {
         setBackgroundResource(R.drawable.btn_disabled)
         iconGravity = ICON_GRAVITY_TEXT_START
+        ContextThemeWrapper(mContext, R. style.button1)
         textSize = 16f
         iconSize  = 52
         iconPadding = 5
@@ -83,6 +90,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
     //Neutral Primary button long tail icon
     fun primaryButtonLongTailIconNeutral(){
         setBackgroundResource(R.drawable.btn_gredient)
+        ContextThemeWrapper(mContext, R. style.button1)
         setTextColor(ContextCompat.getColor(mContext,R.color.white))
         iconGravity = ICON_GRAVITY_TEXT_END
         textSize = 16f
@@ -99,6 +107,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
         setBackgroundResource(R.drawable.btn_clicked)
         setTextColor(ContextCompat.getColor(mContext,R.color.white))
         iconGravity = ICON_GRAVITY_TEXT_END
+        ContextThemeWrapper(mContext, R. style.button1)
         textSize = 16f
         iconSize  = 52
         iconPadding = 5
@@ -112,6 +121,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
     fun primaryButtonLongTailIconDisabled(){
         setBackgroundResource(R.drawable.btn_disabled)
         iconGravity = ICON_GRAVITY_TEXT_END
+        ContextThemeWrapper(mContext, R. style.button1)
         textSize = 16f
         iconSize  = 52
         iconPadding = 5
@@ -127,6 +137,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
         setBackgroundResource(R.drawable.btn_sec_neutral)
         setTextColor( ContextCompat.getColor(mContext,R.color.orange))
         textSize = 14f
+        ContextThemeWrapper(mContext, R. style.button1)
         backgroundTintMode = null
         textAlignment = TEXT_ALIGNMENT_CENTER
         invalidate()
@@ -137,6 +148,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
         setBackgroundResource(R.drawable.btn_sec_clicked)
         setTextColor(ContextCompat.getColor(mContext,R.color.orange))
         textSize = 14f
+        ContextThemeWrapper(mContext, R. style.button1)
         backgroundTintMode = null
         textAlignment = TEXT_ALIGNMENT_CENTER
         invalidate()
@@ -147,6 +159,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
         setBackgroundResource(R.drawable.btn_sec_disabled)
         setTextColor(ContextCompat.getColor(mContext,R.color.disabled_text))
         textSize = 14f
+        ContextThemeWrapper(mContext, R. style.button1)
         backgroundTintMode = null
         textAlignment = TEXT_ALIGNMENT_CENTER
         invalidate()
@@ -157,6 +170,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
         setBackgroundResource(R.drawable.btn_sec_neutral)
         setTextColor(ContextCompat.getColor(mContext,R.color.orange))
         iconGravity = ICON_GRAVITY_TEXT_START
+        ContextThemeWrapper(mContext, R. style.button1)
         textSize = 14f
         iconSize  = 52
         iconPadding = 5
@@ -171,6 +185,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
         setBackgroundResource(R.drawable.btn_sec_clicked)
         setTextColor(ContextCompat.getColor(mContext,R.color.orange))
         iconGravity = ICON_GRAVITY_TEXT_START
+        ContextThemeWrapper(mContext, R. style.button1)
         textSize = 14f
         iconSize  = 52
         iconPadding = 5
@@ -185,6 +200,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
         setBackgroundResource(R.drawable.btn_sec_disabled)
         setTextColor(ContextCompat.getColor(mContext,R.color.disabled_text))
         iconGravity = ICON_GRAVITY_TEXT_START
+        ContextThemeWrapper(mContext, R. style.button1)
         textSize = 14f
         iconSize  = 52
         iconPadding = 5
@@ -199,6 +215,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
         setBackgroundResource(R.drawable.btn_sec_neutral)
         setTextColor(ContextCompat.getColor(mContext,R.color.orange))
         iconGravity = ICON_GRAVITY_TEXT_END
+        ContextThemeWrapper(mContext, R. style.button1)
         textSize = 14f
         iconSize  = 52
         iconPadding = 5
@@ -213,6 +230,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
         setBackgroundResource(R.drawable.btn_sec_clicked)
         setTextColor(ContextCompat.getColor(mContext,R.color.orange))
         iconGravity = ICON_GRAVITY_TEXT_END
+        ContextThemeWrapper(mContext, R. style.button1)
         textSize = 14f
         iconSize  = 52
         iconPadding = 5
@@ -227,6 +245,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
         setBackgroundResource(R.drawable.btn_sec_disabled)
         setTextColor( ContextCompat.getColor(mContext,R.color.disabled_text))
         iconGravity = ICON_GRAVITY_TEXT_END
+        ContextThemeWrapper(mContext, R. style.button1)
         textSize = 14f
         iconSize  = 52
         iconPadding = 5
@@ -242,6 +261,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
         textAlignment = TEXT_ALIGNMENT_CENTER
         textSize = 14f
         //transparent background
+        ContextThemeWrapper(mContext, R. style.button1)
         background= null
         backgroundTintMode = null
         setTextColor( ContextCompat.getColor(mContext,R.color.orange))
@@ -253,14 +273,17 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
         textSize = 14f
         background= null
         backgroundTintMode = null
+        ContextThemeWrapper(mContext, R. style.button1)
         setTextColor( ContextCompat.getColor(mContext,R.color.disabled_text))
         invalidate()
+
     }
 
     //primary Button short neutral
     fun primaryButtonShortNeutral(){
         setTextColor( ContextCompat.getColor(mContext,R.color.white))
         textAlignment = TEXT_ALIGNMENT_CENTER
+        ContextThemeWrapper(mContext, R. style.button1)
         textSize = 16f
         backgroundTintMode = null
         setBackgroundResource(R.drawable.btn_gredient)
@@ -271,6 +294,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
     fun primaryButtonShortClicked() {
         setTextColor(ContextCompat.getColor(mContext,R.color.white))
         textAlignment = TEXT_ALIGNMENT_CENTER
+        ContextThemeWrapper(mContext, R. style.button1)
         textSize = 16f
         backgroundTintMode = null
         setBackgroundResource(R.drawable.btn_clicked)
@@ -281,6 +305,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
     fun primaryButtonShortDisabled() {
         setBackgroundResource(R.drawable.btn_disabled)
         textAlignment = TEXT_ALIGNMENT_CENTER
+        ContextThemeWrapper(mContext, R. style.button1)
         textSize = 16f
         backgroundTintMode = null
         setTextColor(ContextCompat.getColor(mContext,R.color.disabled_text))
@@ -291,6 +316,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
     fun secondaryButtonShortNeutral() {
         setTextColor(ContextCompat.getColor(mContext,R.color.orange))
         textAlignment = TEXT_ALIGNMENT_CENTER
+        ContextThemeWrapper(mContext, R. style.button1)
         textSize = 14f
         backgroundTintMode = null
         setBackgroundResource(R.drawable.btn_sec_neutral)
@@ -301,6 +327,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
     fun secondaryButtonShortClicked(){
         setTextColor(ContextCompat.getColor(mContext,R.color.orange))
         textAlignment = TEXT_ALIGNMENT_CENTER
+        ContextThemeWrapper(mContext, R. style.button1)
         textSize = 14f
         backgroundTintMode = null
         setBackgroundResource(R.drawable.btn_sec_clicked)
@@ -312,6 +339,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
         setBackgroundResource(R.drawable.btn_sec_disabled)
         textAlignment = TEXT_ALIGNMENT_CENTER
         textSize = 14f
+        ContextThemeWrapper(mContext, R. style.button1)
         backgroundTintMode = null
         setTextColor( ContextCompat.getColor(mContext,R.color.disabled_text))
         invalidate()
@@ -321,6 +349,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
     fun secondaryButtonShortGrayNeutral(){
         setTextColor(ContextCompat.getColor(mContext,R.color.orange))
         textAlignment = TEXT_ALIGNMENT_CENTER
+        ContextThemeWrapper(mContext, R. style.button1)
         textSize = 14f
         backgroundTintMode = null
         setBackgroundResource(R.drawable.btn_ui_sec_short_gray)
@@ -332,6 +361,7 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
         setTextColor(ContextCompat.getColor(mContext,R.color.orange))
         textAlignment = TEXT_ALIGNMENT_CENTER
         textSize = 14f
+        ContextThemeWrapper(mContext, R. style.button1)
         backgroundTintMode = null
         setBackgroundResource(R.drawable.btn_ui_sec_gray_clicked)
         invalidate()

@@ -4,7 +4,7 @@
 <item android:left="3dp" android:top="5dp">
     <shape>
         <solid android:color="#caccbb" />
-        <corners android:radius="4dp" />
+        <corners android:radius="4dp"/>
     </shape>
 </item>
 <!-- White foreground. -->
@@ -17,9 +17,8 @@
     <shape>
 
         <stroke android:color="#FFC09A4D"/>
+        <corners android:radius="4dp"/>
 
-
-        <corners android:radius="@dimen/margin_4"/>
 
         <gradient
             android:angle="278"

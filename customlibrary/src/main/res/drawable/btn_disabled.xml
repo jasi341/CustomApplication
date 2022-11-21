@@ -4,8 +4,7 @@
 
     <stroke android:color="@color/quantum_grey500"/>
 
-
-    <corners android:radius="@dimen/margin_4"/>
+    <corners android:radius="4dp"/>
 
     <gradient
         android:startColor="#D9D9D9"
