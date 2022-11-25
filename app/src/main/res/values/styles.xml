@@ -1,9 +1,9 @@
 <resources>
-    <style name="Widget.Unscramble.TextInputLayout.OutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="boxStrokeErrorColor">@android:color/holo_red_light</item>`
-        <item name="errorIconTint">@android:color/holo_red_light</item>
-        <item name="errorTextColor">@android:color/holo_red_light</item>
-        <item name="helperTextTextAppearance">@style/TextAppearance.MaterialComponents.Subtitle1</item>
+    <style name="Widget.Unscramble.TextInputLayout.OutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.Outlined">
+<!--        <item name="boxStrokeErrorColor">@android:color/holo_red_light</item>`-->
+<!--        <item name="errorIconTint">@android:color/holo_red_light</item>-->
+<!--        <item name="errorTextColor">@android:color/holo_red_light</item>-->
+<!--        <item name="helperTextTextAppearance">@style/TextAppearance.MaterialComponents.Subtitle1</item>-->
     </style>
 
     <style name="button" parent="ThemeOverlay.Material3.Button">
@@ -16,5 +16,9 @@
         <item name="android:layout_height">46dp</item>
         <item name="android:layout_width">156dp</item>
         <item name="cornerRadius">4dp</item>
+    </style>
+
+    <style name="TextInputLayoutTheme" parent="Widget.Design.TextInputLayout">
+        <item name="colorOnSurface">@android:color/transparent</item>
     </style>
 </resources>

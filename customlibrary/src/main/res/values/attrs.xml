@@ -1,11 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <declare-styleable name="CustomButton1">
-       <!--Common attributes -->
-        <attr name="drawableLeftCompat" format="reference"/>
-        <attr name="drawableRightCompat" format="reference"/>
+    <declare-styleable name="MaterialButtons">
+        <attr name="FontColor"  format="reference"/>
+        <attr name="Icon" format="reference"/>
+        <attr name="MarginTop" format="dimension"/>
+        <attr name="MarginStart" format="dimension"/>
     </declare-styleable>
 
+    <declare-styleable name="ErrorField">
+
+        <attr name="errorTextSize"   format="dimension"/>
+        <attr name="errorText" format="string"/>
+        <attr name="errorTextColor" format="color"/>
+        <attr name="errorIcon" format="reference"/>
+        <attr name= "errorIconColor" format="color"/>
+
+    </declare-styleable>
+
+<!--    <TextView-->
+<!--        android:id="@+id/errorLayout"-->
+<!--        android:layout_width="63dp"-->
+<!--        android:layout_marginStart="26dp"-->
+<!--        android:visibility="visible"-->
+<!--        android:layout_height="16dp"-->
+<!--        android:text="@string/errorMessage"-->
+<!--        android:textColor="@android:color/holo_red_light"-->
+<!--        android:textSize="@dimen/_10sdp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textField"-->
+<!--        app:drawableStartCompat="@drawable/warning" />-->
+
+        
 
 </resources>

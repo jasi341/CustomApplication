@@ -3,6 +3,19 @@
     <style name="button1" parent="ThemeOverlay.Material3.Button">
         <item name="cornerRadius">4dp</item>
         <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
     </style>
+
+
+    <style name="Widget.MaterialComponents.TextInputLayout.Outlined"
+        parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeErrorColor">@color/error_text</item>
+        <item name="errorIconTint">@color/error_text</item>
+        <item name="errorTextColor">@color/error_text</item>
+        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
+
+    </style>
+
+
 
 </resources>

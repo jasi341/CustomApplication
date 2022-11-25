@@ -21,6 +21,8 @@ class IconsButtonActivity : AppCompatActivity() {
         //Primary Button long
         binding.btn1.primaryButtonLongNeutral()
         binding.btn2.primaryButtonLongClicked()
+
+        binding.btn2.setTextColor(resources.getColor(R.color.black))
         binding.btn3.primaryButtonLongDisabled()
         binding.ld1.loadingPrimaryBtn()
 
@@ -77,13 +79,6 @@ class IconsButtonActivity : AppCompatActivity() {
         binding.btn28.secondaryButtonShortGrayNeutral()
         binding.btn29.secondaryButtonShortGrayClicked()
         binding.ld9.loadingSecondaryBtnGray()
-
-
-
-
-
-
-
 
     }
 }

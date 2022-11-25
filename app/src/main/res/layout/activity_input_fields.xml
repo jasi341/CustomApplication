@@ -10,12 +10,12 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textField"
-        style="@style/Widget.Unscramble.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Mobile Number"
-        app:hintTextColor="#555555"
         android:layout_margin="10dp"
+        app:hintTextColor="#555555"
+        style="@style/Widget.Unscramble.TextInputLayout.OutlinedBox"
         app:startIconDrawable="@drawable/ic_baseline_local_phone_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +26,7 @@
             android:id="@+id/text_input_edit_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="textPersonName|textNoSuggestions"
+            android:inputType="textNoSuggestions"
             android:maxLines="1"
             android:drawablePadding="-9dp"
             android:textColor="@color/black"
@@ -34,29 +34,51 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/error"
-        android:layout_width="63dp"
-        android:layout_marginStart="26dp"
-        android:visibility="gone"
-        android:layout_height="16dp"
-        android:text="@string/errorMessage"
-        android:textColor="@android:color/holo_red_light"
-        android:textSize="12sp"
+<!--    <TextView-->
+<!--        android:id="@+id/errorLayout"-->
+<!--        android:layout_width="63dp"-->
+<!--        android:layout_marginStart="26dp"-->
+<!--        android:visibility="visible"-->
+<!--        android:layout_height="16dp"-->
+<!--        android:text="@string/errorMessage"-->
+<!--        android:textColor="@android:color/holo_red_light"-->
+<!--        android:textSize="@dimen/_10sdp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textField"-->
+<!--        app:drawableStartCompat="@drawable/warning" />-->
+
+<!--    <com.example.customlibrary.ErrorField-->
+<!--        android:id="@+id/errorLayout"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:visibility="gone"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/errorMessage"-->
+<!--        android:drawableStart="@drawable/warning"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/button"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textField" />-->
+
+    <com.example.customlibrary.MaterialButtons
+        android:id="@+id/err"
+        android:layout_width="wrap_content"
+        android:visibility="invisible"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:text="@string/save_it"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textField"
-        app:drawableStartCompat="@drawable/warning" />
+        app:layout_constraintTop_toBottomOf="@+id/textField" />
 
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
         android:text="Button"
+        android:layout_marginTop="@dimen/_2sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textField" />
+        app:layout_constraintTop_toBottomOf="@+id/err" />
 
     <Button
         android:id="@+id/button2"
