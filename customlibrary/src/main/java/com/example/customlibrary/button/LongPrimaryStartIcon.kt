@@ -8,20 +8,23 @@ import com.example.customlibrary.base.Buttons
 import com.example.customlibrary.Utils.txtColor
 import com.example.customlibrary.Utils.txtSize
 
-class Primary(context: Context, attrs: AttributeSet) : Buttons(context, attrs) {
+class LongPrimaryStartIcon(context: Context, attr: AttributeSet) : Buttons(context, attr) {
 
     override fun setNeutral() {
         setBackgroundResource(R.drawable.btn_gredient)
+        setIconTintResource(R.color.white)
         commonAttr(context)
     }
 
     override fun setClicked() {
         setBackgroundResource(R.drawable.btn_clicked)
+        setIconTintResource(R.color.white)
         commonAttr(context)
     }
 
     override fun setDisabled() {
         setBackgroundResource(R.drawable.btn_disabled)
+        setIconTintResource(R.color.disabled_text)
         commonAttr(context, R.color.disabled_text)
     }
 
@@ -40,9 +43,11 @@ class Primary(context: Context, attrs: AttributeSet) : Buttons(context, attrs) {
         } else {
             setTextColor(txtColor(context = context, typedArray = typedArray))
         }
+        iconGravity = ICON_GRAVITY_TEXT_START
+        iconSize = 52
+        iconPadding = 5
         ContextThemeWrapper(context, R.style.button1)
         invalidate()
 
     }
-
 }

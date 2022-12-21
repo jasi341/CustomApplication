@@ -8,30 +8,33 @@ import com.example.customlibrary.base.Buttons
 import com.example.customlibrary.Utils.txtColor
 import com.example.customlibrary.Utils.txtSize
 
-class PrimaryIcon(context: Context, attr: AttributeSet) : Buttons(context, attr) {
+class LongSecondaryStartIcon(context: Context, attrs: AttributeSet) : Buttons(context, attrs) {
 
     override fun setNeutral() {
-        setBackgroundResource(R.drawable.btn_gredient)
-        setIconTintResource(R.color.white)
-        commonAttr(context)
+        setBackgroundResource(R.drawable.btn_sec_neutral)
+        setIconTintResource(R.color.orange)
+        commonAttr(context, R.color.orange)
     }
 
     override fun setClicked() {
-        setBackgroundResource(R.drawable.btn_clicked)
-        setIconTintResource(R.color.white)
-        commonAttr(context)
+        setBackgroundResource(R.drawable.btn_sec_clicked)
+        setIconTintResource(R.color.orange)
+        commonAttr(context, R.color.orange)
     }
 
     override fun setDisabled() {
-        setBackgroundResource(R.drawable.btn_disabled)
+        setBackgroundResource(R.drawable.btn_sec_disabled)
         setIconTintResource(R.color.disabled_text)
         commonAttr(context, R.color.disabled_text)
     }
 
     private fun commonAttr(context: Context, txtColor: Int? = null) {
-        textSize = txtSize(context = context)
-        backgroundTintMode = null
+        textSize = txtSize(context = context, sp = 40f)
         textAlignment = TEXT_ALIGNMENT_CENTER
+        backgroundTintMode = null
+        iconGravity = ICON_GRAVITY_TEXT_START
+        iconSize = 52
+        iconPadding = 5
         if (txtColor != null) {
             setTextColor(
                 txtColor(
@@ -43,11 +46,7 @@ class PrimaryIcon(context: Context, attr: AttributeSet) : Buttons(context, attr)
         } else {
             setTextColor(txtColor(context = context, typedArray = typedArray))
         }
-        iconGravity = ICON_GRAVITY_TEXT_START
-        iconSize = 52
-        iconPadding = 5
         ContextThemeWrapper(context, R.style.button1)
         invalidate()
-
     }
 }
