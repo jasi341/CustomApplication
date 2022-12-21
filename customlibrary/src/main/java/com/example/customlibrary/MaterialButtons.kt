@@ -6,92 +6,83 @@ import android.util.AttributeSet
 import androidx.appcompat.view.ContextThemeWrapper
 import androidx.core.content.ContextCompat
 import com.google.android.material.button.MaterialButton
-import com.google.android.material.internal.ViewUtils.dpToPx
 
-class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : MaterialButton(mContext,attrs) {
+class MaterialButtons(private var mContext: Context, attrs: AttributeSet) :
+    MaterialButton(mContext, attrs) {
 
-    private val a = mContext.obtainStyledAttributes(attrs,R.styleable.MaterialButtons)
+    private val a = mContext.obtainStyledAttributes(attrs, R.styleable.MaterialButtons)
+
+    // Default Value = 50f
+    private fun txtSizeHelper(sp: Float = 50f): Float {
+        return (sp / resources.displayMetrics.density)
+    }
+
+    // Default color = White
+    private fun txtColorHelper(color: Int = R.color.white): Int {
+        return a.getColor(
+            R.styleable.MaterialButtons_FontColor,
+            ContextCompat.getColor(mContext, color)
+        )
+    }
 
     //Neutral Primary button Long
     fun primaryButtonLongNeutral() {
         setBackgroundResource(R.drawable.btn_gredient)
-        val sp = 50f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
+        textSize = txtSizeHelper()
         backgroundTintMode = null
         textAlignment = TEXT_ALIGNMENT_CENTER
-        //  setTextColor( ContextCompat.getColor(mContext,R.color.white))
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.white))
-        setTextColor(fontColor)
-        ContextThemeWrapper(mContext, R. style.button1)
+        setTextColor(txtColorHelper())
+        ContextThemeWrapper(mContext, R.style.button1)
         invalidate()
-
     }
 
     //Clicked Primary button Long
     fun primaryButtonLongClicked() {
         setBackgroundResource(R.drawable.btn_clicked)
-        val sp = 50f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
+        textSize = txtSizeHelper()
         backgroundTintMode = null
         textAlignment = TEXT_ALIGNMENT_CENTER
-        // setTextColor( ContextCompat.getColor(mContext,R.color.white))
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.white))
-        setTextColor(fontColor)
-        ContextThemeWrapper(mContext, R. style.button1)
+        setTextColor(txtColorHelper())
+        ContextThemeWrapper(mContext, R.style.button1)
         invalidate()
     }
 
     //Disabled Primary button Long
     fun primaryButtonLongDisabled() {
         setBackgroundResource(R.drawable.btn_disabled)
-        val sp = 50f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
-        ContextThemeWrapper(mContext, R. style.button1)
+        textSize = txtSizeHelper()
         backgroundTintMode = null
         textAlignment = TEXT_ALIGNMENT_CENTER
-        //setTextColor( ContextCompat.getColor(mContext,R.color.disabled_text))
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.disabled_text))
-        setTextColor(fontColor)
+        setTextColor(txtColorHelper(R.color.disabled_text))
+        ContextThemeWrapper(mContext, R.style.button1)
         invalidate()
     }
 
-
     //Neutral Primary button long icon
-    fun primaryButtonLongIconNeutral(){
-        //  setTextColor( ContextCompat.getColor(mContext,R.color.white))
+    fun primaryButtonLongIconNeutral() {
         setBackgroundResource(R.drawable.btn_gredient)
-        ContextThemeWrapper(mContext, R. style.button1)
+        ContextThemeWrapper(mContext, R.style.button1)
         iconGravity = ICON_GRAVITY_TEXT_START
-        val sp = 50f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
-        iconSize  = 52
+        textSize = txtSizeHelper()
+        iconSize = 52
         iconPadding = 5
         backgroundTintMode = null
         setIconTintResource(R.color.white)
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.white))
-        setTextColor(fontColor)
+        setTextColor(txtColorHelper())
         textAlignment = TEXT_ALIGNMENT_CENTER
         invalidate()
     }
 
     //Clicked Primary button long icon
-    fun primaryButtonLongIconClicked(){
-        //  setTextColor(ContextCompat.getColor(mContext,R.color.white))
+    fun primaryButtonLongIconClicked() {
         setBackgroundResource(R.drawable.btn_clicked)
-        ContextThemeWrapper(mContext, R. style.button1)
+        ContextThemeWrapper(mContext, R.style.button1)
         iconGravity = ICON_GRAVITY_TEXT_START
-        val sp = 50f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
-        iconSize  = 52
+        textSize = txtSizeHelper()
+        iconSize = 52
         iconPadding = 5
         backgroundTintMode = null
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.white))
-        setTextColor(fontColor)
+        setTextColor(txtColorHelper())
         setIconTintResource(R.color.white)
         textAlignment = TEXT_ALIGNMENT_CENTER
         invalidate()
@@ -101,34 +92,26 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
     fun primaryButtonLongIconDisabled() {
         setBackgroundResource(R.drawable.btn_disabled)
         iconGravity = ICON_GRAVITY_TEXT_START
-        ContextThemeWrapper(mContext, R. style.button1)
-        val sp = 50f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
-        iconSize  = 52
+        ContextThemeWrapper(mContext, R.style.button1)
+        textSize = txtSizeHelper()
+        iconSize = 52
         iconPadding = 5
         backgroundTintMode = null
         setIconTintResource(R.color.disabled_text)
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.disabled_text))
-        setTextColor(fontColor)
+        setTextColor(txtColorHelper(R.color.disabled_text))
         textAlignment = TEXT_ALIGNMENT_CENTER
-        //setTextColor(ContextCompat.getColor(mContext,R.color.disabled_text))
         invalidate()
     }
 
     //Neutral Primary button long tail icon
-    fun primaryButtonLongTailIconNeutral(){
+    fun primaryButtonLongTailIconNeutral() {
         setBackgroundResource(R.drawable.btn_gredient)
-        ContextThemeWrapper(mContext, R. style.button1)
-        // setTextColor(ContextCompat.getColor(mContext,R.color.white))
+        ContextThemeWrapper(mContext, R.style.button1)
         iconGravity = ICON_GRAVITY_TEXT_END
-        val sp = 50f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
-        iconSize  = 52
+        textSize = txtSizeHelper()
+        iconSize = 52
         iconPadding = 5
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.white))
-        setTextColor(fontColor)
+        setTextColor(txtColorHelper())
         backgroundTintMode = null
         setIconTintResource(R.color.white)
         textAlignment = TEXT_ALIGNMENT_CENTER
@@ -136,121 +119,91 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
     }
 
     //CLicked Primary button long tail icon
-    fun primaryButtonLongTailIconClicked(){
+    fun primaryButtonLongTailIconClicked() {
         setBackgroundResource(R.drawable.btn_clicked)
-        //  setTextColor(ContextCompat.getColor(mContext,R.color.white))
         iconGravity = ICON_GRAVITY_TEXT_END
-        ContextThemeWrapper(mContext, R. style.button1)
-        val sp = 50f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
-        iconSize  = 52
+        ContextThemeWrapper(mContext, R.style.button1)
+        textSize = txtSizeHelper()
+        iconSize = 52
         iconPadding = 5
         backgroundTintMode = null
         setIconTintResource(R.color.white)
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.white))
-        setTextColor(fontColor)
+        setTextColor(txtColorHelper())
         textAlignment = TEXT_ALIGNMENT_CENTER
         invalidate()
     }
 
     //Disabled Primary button long tail icon
-    fun primaryButtonLongTailIconDisabled(){
+    fun primaryButtonLongTailIconDisabled() {
         setBackgroundResource(R.drawable.btn_disabled)
         iconGravity = ICON_GRAVITY_TEXT_END
-        ContextThemeWrapper(mContext, R. style.button1)
-        val sp = 50f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
-        iconSize  = 52
+        ContextThemeWrapper(mContext, R.style.button1)
+        textSize = txtSizeHelper()
+        iconSize = 52
         iconPadding = 5
-        backgroundTintMode= null
+        backgroundTintMode = null
         setIconTintResource(R.color.disabled_text)
         textAlignment = TEXT_ALIGNMENT_CENTER
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.disabled_text))
-        setTextColor(fontColor)
-        //  setTextColor(ContextCompat.getColor(mContext,R.color.disabled_text))
+        setTextColor(txtColorHelper(R.color.disabled_text))
         invalidate()
     }
 
     //Neutral Secondary button long
-    fun secondaryButtonLongNeutral(){
+    fun secondaryButtonLongNeutral() {
         setBackgroundResource(R.drawable.btn_sec_neutral)
-        //  setTextColor( ContextCompat.getColor(mContext,R.color.orange))
-        val sp = 40f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
-        ContextThemeWrapper(mContext, R. style.button1)
+        textSize = txtSizeHelper(40f)
+        ContextThemeWrapper(mContext, R.style.button1)
         backgroundTintMode = null
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.orange))
-        setTextColor(fontColor)
+        setTextColor(txtColorHelper(R.color.orange))
         textAlignment = TEXT_ALIGNMENT_CENTER
         invalidate()
     }
 
     //Clicked Secondary button long
-    fun secondaryButtonLongClicked(){
+    fun secondaryButtonLongClicked() {
         setBackgroundResource(R.drawable.btn_sec_clicked)
-        // setTextColor(ContextCompat.getColor(mContext,R.color.orange))
-        //textSize = 14f
-        val sp = 40f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
-        ContextThemeWrapper(mContext, R. style.button1)
+        textSize = txtSizeHelper(40f)
+        ContextThemeWrapper(mContext, R.style.button1)
         backgroundTintMode = null
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.orange))
-        setTextColor(fontColor)
+        setTextColor(txtColorHelper(R.color.orange))
         textAlignment = TEXT_ALIGNMENT_CENTER
         invalidate()
     }
 
     //DisabledSecondary button long
-    fun secondaryButtonLongDisabled(){
+    fun secondaryButtonLongDisabled() {
         setBackgroundResource(R.drawable.btn_sec_disabled)
-        // setTextColor(ContextCompat.getColor(mContext,R.color.disabled_text))
-       // textSize = 14f
-        val sp = 40f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
-        ContextThemeWrapper(mContext, R. style.button1)
+        textSize = txtSizeHelper(40f)
+        ContextThemeWrapper(mContext, R.style.button1)
         backgroundTintMode = null
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.disabled_text))
-        setTextColor(fontColor)
+        setTextColor(txtColorHelper(R.color.disabled_text))
         textAlignment = TEXT_ALIGNMENT_CENTER
         invalidate()
     }
 
     //Neutral secondary button long icon
-    fun secondaryButtonLongIconNeutral(){
+    fun secondaryButtonLongIconNeutral() {
         setBackgroundResource(R.drawable.btn_sec_neutral)
-        //setTextColor(ContextCompat.getColor(mContext,R.color.orange))
         iconGravity = ICON_GRAVITY_TEXT_START
-        ContextThemeWrapper(mContext, R. style.button1)
-        val sp = 40f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
-        iconSize  = 52
+        ContextThemeWrapper(mContext, R.style.button1)
+        textSize = txtSizeHelper(40f)
+        iconSize = 52
         iconPadding = 5
         backgroundTintMode = null
         setIconTintResource(R.color.orange)
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.orange))
-        setTextColor(fontColor)
+        setTextColor(txtColorHelper(R.color.orange))
         textAlignment = TEXT_ALIGNMENT_CENTER
         invalidate()
     }
 
     //Clicked secondary button long icon
-    fun secondaryButtonLongIconClicked(){
+    fun secondaryButtonLongIconClicked() {
         setBackgroundResource(R.drawable.btn_sec_clicked)
-        // setTextColor(ContextCompat.getColor(mContext,R.color.orange))
         iconGravity = ICON_GRAVITY_TEXT_START
-        ContextThemeWrapper(mContext, R. style.button1)
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.orange))
-        setTextColor(fontColor)
-        val sp = 40f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
-        iconSize  = 52
+        ContextThemeWrapper(mContext, R.style.button1)
+        setTextColor(txtColorHelper(R.color.orange))
+        textSize = txtSizeHelper(40f)
+        iconSize = 52
         iconPadding = 5
         backgroundTintMode = null
         setIconTintResource(R.color.orange)
@@ -259,17 +212,13 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
     }
 
     //Disabled secondary button long icon
-    fun secondaryButtonLongIconDisabled(){
+    fun secondaryButtonLongIconDisabled() {
         setBackgroundResource(R.drawable.btn_sec_disabled)
-        // setTextColor(ContextCompat.getColor(mContext,R.color.disabled_text))
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.disabled_text))
-        setTextColor(fontColor)
+        setTextColor(txtColorHelper(R.color.disabled_text))
         iconGravity = ICON_GRAVITY_TEXT_START
-        ContextThemeWrapper(mContext, R. style.button1)
-        val sp = 40f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
-        iconSize  = 52
+        ContextThemeWrapper(mContext, R.style.button1)
+        textSize = txtSizeHelper(40f)
+        iconSize = 52
         iconPadding = 5
         backgroundTintMode = null
         setIconTintResource(R.color.disabled_text)
@@ -278,17 +227,13 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
     }
 
     //Neutral secondary button long tail icon
-    fun secondaryButtonLongTailIconNeutral(){
+    fun secondaryButtonLongTailIconNeutral() {
         setBackgroundResource(R.drawable.btn_sec_neutral)
-        //setTextColor(ContextCompat.getColor(mContext,R.color.orange))
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.orange))
-        setTextColor(fontColor)
+        setTextColor(txtColorHelper(R.color.orange))
         iconGravity = ICON_GRAVITY_TEXT_END
-        ContextThemeWrapper(mContext, R. style.button1)
-        val sp = 40f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
-        iconSize  = 52
+        ContextThemeWrapper(mContext, R.style.button1)
+        textSize = txtSizeHelper(40f)
+        iconSize = 52
         iconPadding = 5
         backgroundTintMode = null
         setIconTintResource(R.color.orange)
@@ -297,86 +242,66 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
     }
 
     //CLicked secondary button long icon
-    fun secondaryButtonLongTailIconClicked(){
+    fun secondaryButtonLongTailIconClicked() {
         setBackgroundResource(R.drawable.btn_sec_clicked)
-        //setTextColor(ContextCompat.getColor(mContext,R.color.orange))
         iconGravity = ICON_GRAVITY_TEXT_END
-        ContextThemeWrapper(mContext, R. style.button1)
-        val sp = 40f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
-        iconSize  = 52
+        ContextThemeWrapper(mContext, R.style.button1)
+        textSize = txtSizeHelper(40f)
+        iconSize = 52
         iconPadding = 5
         backgroundTintMode = null
         setIconTintResource(R.color.orange)
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.orange))
-        setTextColor(fontColor)
+        setTextColor(txtColorHelper(R.color.orange))
         textAlignment = TEXT_ALIGNMENT_CENTER
         invalidate()
     }
 
     //Disabled secondary button long icon
-    fun secondaryButtonLongTailIconDisabled(){
+    fun secondaryButtonLongTailIconDisabled() {
         setBackgroundResource(R.drawable.btn_sec_disabled)
-        //setTextColor( ContextCompat.getColor(mContext,R.color.disabled_text))
         iconGravity = ICON_GRAVITY_TEXT_END
-        ContextThemeWrapper(mContext, R. style.button1)
-        val sp = 40f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
-        iconSize  = 52
+        ContextThemeWrapper(mContext, R.style.button1)
+        textSize = txtSizeHelper(40f)
+        iconSize = 52
         iconPadding = 5
         backgroundTintMode = null
         setIconTintResource(R.color.disabled_text)
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.disabled_text))
-        setTextColor(fontColor)
+        setTextColor(txtColorHelper(R.color.disabled_text))
         textAlignment = TEXT_ALIGNMENT_CENTER
         invalidate()
     }
 
     //can be used for Neutral and clicked of tertiary buttons
-    fun tertiaryButtonNeutral(){
+    fun tertiaryButtonNeutral() {
         // setBackgroundColor(ContextCompat.getColor(mContext,R.color.white))
         textAlignment = TEXT_ALIGNMENT_CENTER
-        val sp = 40f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
-        ContextThemeWrapper(mContext, R. style.button1)
-        background= null
+        textSize = txtSizeHelper(40f)
+        ContextThemeWrapper(mContext, R.style.button1)
+        background = null
         backgroundTintMode = null
-        //setTextColor(ContextCompat.getColor(mContext,R.color.orange))
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.orange))
-        setTextColor(fontColor)
+        setTextColor(txtColorHelper(R.color.orange))
         invalidate()
     }
-    // disabled tertiary Button
-    fun tertiaryButtonDisabled(){
-        textAlignment = TEXT_ALIGNMENT_CENTER
-        val sp = 40f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
-        background= null
-        backgroundTintMode = null
-        ContextThemeWrapper(mContext, R. style.button1)
-        //setTextColor( ContextCompat.getColor(mContext,R.color.disabled_text))
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.disabled_text))
-        setTextColor(fontColor)
-        invalidate()
 
+    // disabled tertiary Button
+    fun tertiaryButtonDisabled() {
+        textAlignment = TEXT_ALIGNMENT_CENTER
+        textSize = txtSizeHelper(40f)
+        background = null
+        backgroundTintMode = null
+        ContextThemeWrapper(mContext, R.style.button1)
+        setTextColor(txtColorHelper(R.color.disabled_text))
+        invalidate()
     }
 
     //primary Button short neutral
-    fun primaryButtonShortNeutral(){
-        //setTextColor( ContextCompat.getColor(mContext,R.color.white))
+    fun primaryButtonShortNeutral() {
         textAlignment = TEXT_ALIGNMENT_CENTER
-        ContextThemeWrapper(mContext, R. style.button1)
-        val sp = 50f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
+        ContextThemeWrapper(mContext, R.style.button1)
+        textSize = txtSizeHelper(40f)
         backgroundTintMode = null
         setBackgroundResource(R.drawable.btn_gredient)
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.white))
-        setTextColor(fontColor)
+        setTextColor(txtColorHelper())
         invalidate()
     }
 
@@ -384,14 +309,11 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
     fun primaryButtonShortClicked() {
         //setTextColor(ContextCompat.getColor(mContext,R.color.white))
         textAlignment = TEXT_ALIGNMENT_CENTER
-        ContextThemeWrapper(mContext, R. style.button1)
-        val sp = 50f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
+        ContextThemeWrapper(mContext, R.style.button1)
+        textSize = txtSizeHelper(50f)
         backgroundTintMode = null
         setBackgroundResource(R.drawable.btn_clicked)
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.white))
-        setTextColor(fontColor)
+        setTextColor(txtColorHelper())
         invalidate()
     }
 
@@ -399,126 +321,96 @@ class MaterialButtons(private var mContext: Context, attrs:AttributeSet) : Mater
     fun primaryButtonShortDisabled() {
         setBackgroundResource(R.drawable.btn_disabled)
         textAlignment = TEXT_ALIGNMENT_CENTER
-        ContextThemeWrapper(mContext, R. style.button1)
-        val sp = 50f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
+        ContextThemeWrapper(mContext, R.style.button1)
+        textSize = txtSizeHelper(50f)
         backgroundTintMode = null
-        // setTextColor(ContextCompat.getColor(mContext,R.color.disabled_text))
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.disabled_text))
-        setTextColor(fontColor)
+        setTextColor(txtColorHelper(R.color.disabled_text))
         invalidate()
     }
 
     //Neutral secondary button short
     fun secondaryButtonShortNeutral() {
-        //setTextColor(ContextCompat.getColor(mContext,R.color.orange))
         textAlignment = TEXT_ALIGNMENT_CENTER
-        ContextThemeWrapper(mContext, R. style.button1)
-        val sp = 40f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
+        ContextThemeWrapper(mContext, R.style.button1)
+        textSize = txtSizeHelper(40f)
         backgroundTintMode = null
         setBackgroundResource(R.drawable.btn_sec_neutral)
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.orange))
-        setTextColor(fontColor)
+        setTextColor(txtColorHelper(R.color.orange))
         invalidate()
     }
 
     //Clicked secondary button short
-    fun secondaryButtonShortClicked(){
-        // setTextColor(ContextCompat.getColor(mContext,R.color.orange))
+    fun secondaryButtonShortClicked() {
         textAlignment = TEXT_ALIGNMENT_CENTER
-        ContextThemeWrapper(mContext, R. style.button1)
-        val sp = 40f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
+        ContextThemeWrapper(mContext, R.style.button1)
+        textSize = txtSizeHelper(40f)
         backgroundTintMode = null
         setBackgroundResource(R.drawable.btn_sec_clicked)
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.orange))
-        setTextColor(fontColor)
+        setTextColor(txtColorHelper(R.color.orange))
         invalidate()
     }
 
     //Disabled secondary button short
-    fun secondaryButtonShortDisabled(){
+    fun secondaryButtonShortDisabled() {
         setBackgroundResource(R.drawable.btn_sec_disabled)
         textAlignment = TEXT_ALIGNMENT_CENTER
-        val sp = 40f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
-        ContextThemeWrapper(mContext, R. style.button1)
+        textSize = txtSizeHelper(40f)
+        ContextThemeWrapper(mContext, R.style.button1)
         backgroundTintMode = null
-        // setTextColor( ContextCompat.getColor(mContext,R.color.disabled_text))
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.disabled_text))
-        setTextColor(fontColor)
+        setTextColor(txtColorHelper(R.color.disabled_text))
         invalidate()
     }
 
     //Secondary button short gray
-    fun secondaryButtonShortGrayNeutral(){
-        // setTextColor(ContextCompat.getColor(mContext,R.color.orange))
+    fun secondaryButtonShortGrayNeutral() {
         textAlignment = TEXT_ALIGNMENT_CENTER
-        ContextThemeWrapper(mContext, R. style.button1)
-        val sp = 40f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
+        ContextThemeWrapper(mContext, R.style.button1)
+        textSize = txtSizeHelper(40f)
         backgroundTintMode = null
         setBackgroundResource(R.drawable.btn_ui_sec_short_gray)
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.orange))
-        setTextColor(fontColor)
+        setTextColor(txtColorHelper(R.color.orange))
         invalidate()
     }
 
     //Secondary button short gray clicked
-    fun secondaryButtonShortGrayClicked(){
-        //setTextColor(ContextCompat.getColor(mContext,R.color.orange))
+    fun secondaryButtonShortGrayClicked() {
         textAlignment = TEXT_ALIGNMENT_CENTER
-        val sp = 40f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
-        ContextThemeWrapper(mContext, R. style.button1)
+        textSize = txtSizeHelper(40f)
+        ContextThemeWrapper(mContext, R.style.button1)
         backgroundTintMode = null
         setBackgroundResource(R.drawable.btn_ui_sec_gray_clicked)
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.orange))
-        setTextColor(fontColor)
+        setTextColor(txtColorHelper(R.color.orange))
         invalidate()
     }
 
     //can be used for Neutral and clicked of tertiary buttons
-    fun errorMessage(){
-        // setBackgroundColor(ContextCompat.getColor(mContext,R.color.white))
-        textAlignment  = TEXT_ALIGNMENT_TEXT_START
-        val sp = 35f
-        val dp = sp / resources.displayMetrics.density
-        textSize = dp
-        ContextThemeWrapper(mContext, R. style.button1)
-        background= null
+    fun errorMessage() {
+        textAlignment = TEXT_ALIGNMENT_TEXT_START
+        textSize = txtSizeHelper(35f)
+        ContextThemeWrapper(mContext, R.style.button1)
+        background = null
         backgroundTintMode = null
-        val text = a.resources.getText(R.string.error_message,"Invalid Input")
+        val text = resources.getText(R.string.error_message, "Invalid Input")
         setText(text)
 
         val iconDrawable = a.getDrawable(R.styleable.MaterialButtons_Icon)
-        iconDrawable?.setTint(ContextCompat.getColor(mContext,R.color.error_text))
+        iconDrawable?.setTint(ContextCompat.getColor(mContext, R.color.error_text))
         icon = iconDrawable
 
-        if(iconDrawable==null){
-            icon = ContextCompat.getDrawable(mContext,R.drawable.ui_warning)
+        if (iconDrawable == null) {
+            icon = ContextCompat.getDrawable(mContext, R.drawable.ui_warning)
         }
         iconSize = 45
         isAllCaps = false
 
         //set Margin
-        val marginTop = a.getDimension(R.styleable.MaterialButtons_MarginTop,-10f)
-        setPadding(0,marginTop.toInt(),0,0)
+        val marginTop = a.getDimension(R.styleable.MaterialButtons_MarginTop, -10f)
+        setPadding(0, marginTop.toInt(), 0, 0)
 
-        iconPadding =  mContext.resources.getDimensionPixelSize(com.intuit.sdp.R.dimen._4sdp)
-
+        iconPadding = mContext.resources.getDimensionPixelSize(com.intuit.sdp.R.dimen._4sdp)
         iconSize = mContext.resources.getDimensionPixelSize(com.intuit.sdp.R.dimen._12sdp)
-
-        iconTint = ColorStateList.valueOf(ContextCompat.getColor(mContext,R.color.error_text))
-        val fontColor = a.getColor(R.styleable.MaterialButtons_FontColor,ContextCompat.getColor(mContext,R.color.error_text))
-        setTextColor(fontColor)
+        iconTint = ColorStateList.valueOf(ContextCompat.getColor(mContext, R.color.error_text))
+        setTextColor(txtColorHelper(R.color.error_text))
         invalidate()
     }
 

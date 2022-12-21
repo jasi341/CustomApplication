@@ -18,19 +18,25 @@
 
     </declare-styleable>
 
-<!--    <TextView-->
-<!--        android:id="@+id/errorLayout"-->
-<!--        android:layout_width="63dp"-->
-<!--        android:layout_marginStart="26dp"-->
-<!--        android:visibility="visible"-->
-<!--        android:layout_height="16dp"-->
-<!--        android:text="@string/errorMessage"-->
-<!--        android:textColor="@android:color/holo_red_light"-->
-<!--        android:textSize="@dimen/_10sdp"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/textField"-->
-<!--        app:drawableStartCompat="@drawable/warning" />-->
+    <declare-styleable name="Buttons">
+<!--        <attr name="FontColor" format="reference" />-->
+<!--        <attr name="Icon" format="reference" />-->
+<!--        <attr name="MarginTop" format="dimension" />-->
+<!--        <attr name="MarginStart" format="dimension" />-->
+    </declare-styleable>
 
-        
+    <!--    <TextView-->
+    <!--        android:id="@+id/errorLayout"-->
+    <!--        android:layout_width="63dp"-->
+    <!--        android:layout_marginStart="26dp"-->
+    <!--        android:visibility="visible"-->
+    <!--        android:layout_height="16dp"-->
+    <!--        android:text="@string/errorMessage"-->
+    <!--        android:textColor="@android:color/holo_red_light"-->
+    <!--        android:textSize="@dimen/_10sdp"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/textField"-->
+    <!--        app:drawableStartCompat="@drawable/warning" />-->
+
 
 </resources>
