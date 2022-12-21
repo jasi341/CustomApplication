@@ -1,84 +1,87 @@
 package com.example.customapplication
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.customapplication.databinding.ActivityIconsButtonBinding
 
 
 class IconsButtonActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityIconsButtonBinding
+    private var _binding: ActivityIconsButtonBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityIconsButtonBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+       _binding = ActivityIconsButtonBinding.inflate(layoutInflater)
 
+        val view = binding.root
 
-        //Primary Button long
-        binding.btn1.primaryButtonLongNeutral()
-        binding.btn2.primaryButtonLongClicked()
+        setContentView(view)
 
-        binding.btn2.setTextColor(resources.getColor(R.color.black))
-        binding.btn3.primaryButtonLongDisabled()
-        binding.ld1.loadingPrimaryBtn()
+        binding.apply {
+            //Primary Button long
+            btn1.setNeutral()
+            btn2.setClicked()
+            btn3.setDisabled()
+            ld1.loadingPrimaryBtn()
 
-        //Primary Button Long Icon
-        binding.btn4.primaryButtonLongIconNeutral()
-        binding.btn5.primaryButtonLongIconClicked()
-        binding.btn6.primaryButtonLongIconDisabled()
-        binding.ld2.loadingPrimaryBtn()
+            //Primary Button Long Icon
+            btn4.setNeutral()
+            btn5.setClicked()
+            btn6.setDisabled()
+            ld2.loadingPrimaryBtn()
 
-        //Primary Button Long Tail Icon
-        binding.btn7.primaryButtonLongTailIconNeutral()
-        binding.btn8.primaryButtonLongTailIconClicked()
-        binding.btn9.primaryButtonLongTailIconDisabled()
-        binding.ld3.loadingPrimaryBtn()
+            //Primary Button Long Tail Icon
+            btn7.setNeutral()
+            btn8.setClicked()
+            btn9.setDisabled()
+            ld3.loadingPrimaryBtn()
 
-        //Secondary Button Long
-        binding.btn10.secondaryButtonLongNeutral()
-        binding.btn11.secondaryButtonLongClicked()
-        binding.btn12.secondaryButtonLongDisabled()
-        binding.ld4.loadingSecondaryBtn()
+            //Secondary Button Long
+            btn10.setNeutral()
+            btn11.setClicked()
+            btn12.setDisabled()
+            ld4.loadingSecondaryBtn()
 
-        //Secondary Button Long Icon
-        binding.btn13.secondaryButtonLongIconNeutral()
-        binding.btn14.secondaryButtonLongIconClicked()
-        binding.btn15.secondaryButtonLongIconDisabled()
-        binding.ld5.loadingSecondaryBtn()
+            //Secondary Button Long Icon
+            btn13.setNeutral()
+            btn14.setClicked()
+            btn15.setDisabled()
+            ld5.loadingSecondaryBtn()
 
-        //Secondary Button long Tail Icon
-        binding.btn16.secondaryButtonLongTailIconNeutral()
-        binding.btn17.secondaryButtonLongTailIconClicked()
-        binding.btn18.secondaryButtonLongTailIconDisabled()
-        binding.ld6.loadingSecondaryBtn()
+            //Secondary Button long Tail Icon
+            btn16.setNeutral()
+            btn17.setClicked()
+            btn18.setDisabled()
+            ld6.loadingSecondaryBtn()
 
-        //tertiary Button
-        binding.btn19.tertiaryButtonNeutral()
-        binding.btn20.tertiaryButtonNeutral()
-        binding.btn21.tertiaryButtonDisabled()
+            //tertiary Button
+            btn19.setNeutral()
+            btn20.setNeutral()
+            btn21.setDisabled()
 
+            //primary Button short
+            btn22.setNeutral()
+            btn23.setClicked()
+            btn24.setDisabled()
+            ld7.loadingPrimaryBtn()
 
-        //primary Button short
-        binding.btn22.primaryButtonShortNeutral()
-        binding.btn23.primaryButtonShortClicked()
-        binding.btn24.primaryButtonShortDisabled()
-        binding.ld7.loadingPrimaryBtn()
+            //secondary Buttons Short
+            btn25.setNeutral()
+            btn26.setClicked()
+            btn27.setDisabled()
+            ld8.loadingSecondaryBtn()
 
+            //secondary Button Short Grey
+            btn28.setNeutral()
+            btn29.setClicked()
+            ld9.loadingSecondaryBtnGray()
+        }
+    }
 
-        //secondary Buttons Short
-        binding.btn25.secondaryButtonShortNeutral()
-        binding.btn26.secondaryButtonShortClicked()
-        binding.btn27.secondaryButtonShortDisabled()
-        binding.ld8.loadingSecondaryBtn()
-
-        //secondary Button Short Grey
-        binding.btn28.secondaryButtonShortGrayNeutral()
-        binding.btn29.secondaryButtonShortGrayClicked()
-        binding.ld9.loadingSecondaryBtnGray()
-
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 }

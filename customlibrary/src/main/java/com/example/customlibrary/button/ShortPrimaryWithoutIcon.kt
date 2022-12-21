@@ -16,14 +16,14 @@ class ShortPrimaryWithoutIcon(context: Context, attrs: AttributeSet) : Buttons(c
     }
 
     override fun setClicked() {
-        textSize = Utils.txtSize(context = context, sp = 50f)
+        textSize = Utils.txtSize(context = context, sp = 40f)
         setBackgroundResource(R.drawable.btn_clicked)
         commonAttr()
     }
 
     override fun setDisabled() {
         setBackgroundResource(R.drawable.btn_disabled)
-        textSize = Utils.txtSize(context = context, sp = 50f)
+        textSize = Utils.txtSize(context = context, sp = 40f)
         commonAttr(R.color.disabled_text)
     }
 
