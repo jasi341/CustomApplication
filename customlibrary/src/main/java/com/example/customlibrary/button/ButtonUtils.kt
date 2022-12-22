@@ -1,13 +1,23 @@
-package com.example.customlibrary
+package com.example.customlibrary.button
 
 import android.content.Context
 import android.content.res.TypedArray
 import androidx.core.content.ContextCompat
+import com.example.customlibrary.R
 
-object Utils {
-    private const val defaultFontSize = 50f;
+object ButtonUtils {
 
-    fun txtSize(sp: Float = defaultFontSize, context: Context): Float =
+    object TextSize {
+        const val SMALL = 40f
+        const val LARGE = 50f
+    }
+
+    object Icon {
+        const val SIZE = 52
+        const val PADDING = 5
+    }
+
+    fun txtSize(sp: Float, context: Context): Float =
         (sp / context.resources.displayMetrics.density)
 
 
