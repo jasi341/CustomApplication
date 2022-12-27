@@ -4,7 +4,6 @@ import android.content.Context
 import android.util.AttributeSet
 import androidx.appcompat.view.ContextThemeWrapper
 import com.example.customlibrary.R
-import com.example.customlibrary.Utils
 import com.example.customlibrary.base.Buttons
 
 class TertiaryWithoutIcon(context: Context, attrs: AttributeSet) : Buttons(context, attrs) {
@@ -18,13 +17,13 @@ class TertiaryWithoutIcon(context: Context, attrs: AttributeSet) : Buttons(conte
     }
 
     private fun commonAttr(txtColor: Int? = null) {
-        textSize = Utils.txtSize(context = context, sp = 40f)
+        textSize = ButtonUtils.txtSize(context = context, sp = ButtonUtils.TextSize.SMALL)
         textAlignment = TEXT_ALIGNMENT_CENTER
         background = null
         backgroundTintMode = null
         if (txtColor != null) {
             setTextColor(
-                Utils.txtColor(
+                ButtonUtils.txtColor(
                     color = txtColor,
                     context = context,
                     typedArray = typedArray

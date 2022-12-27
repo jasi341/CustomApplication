@@ -4,7 +4,6 @@ import android.content.Context
 import android.util.AttributeSet
 import androidx.appcompat.view.ContextThemeWrapper
 import com.example.customlibrary.R
-import com.example.customlibrary.Utils
 import com.example.customlibrary.base.Buttons
 
 class ShortSecondaryGrey(context: Context, attrs: AttributeSet) : Buttons(context, attrs) {
@@ -23,9 +22,9 @@ class ShortSecondaryGrey(context: Context, attrs: AttributeSet) : Buttons(contex
         textAlignment = TEXT_ALIGNMENT_CENTER
         backgroundTintMode = null
         ContextThemeWrapper(context, R.style.button1)
-        textSize = Utils.txtSize(context = context, sp = 40f)
+        textSize = ButtonUtils.txtSize(context = context, sp = ButtonUtils.TextSize.SMALL)
         setTextColor(
-            Utils.txtColor(
+            ButtonUtils.txtColor(
                 color = R.color.orange, context = context, typedArray = typedArray
             )
         )

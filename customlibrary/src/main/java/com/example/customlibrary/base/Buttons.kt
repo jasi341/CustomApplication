@@ -20,7 +20,7 @@ open class Buttons(context: Context, attrs: AttributeSet) : MaterialButton(conte
 
     }
 
-    open fun setLoading(){
+    open fun setLoading() {
 
     }
 

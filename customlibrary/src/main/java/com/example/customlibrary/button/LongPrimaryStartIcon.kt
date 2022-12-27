@@ -5,31 +5,31 @@ import android.util.AttributeSet
 import androidx.appcompat.view.ContextThemeWrapper
 import com.example.customlibrary.R
 import com.example.customlibrary.base.Buttons
-import com.example.customlibrary.Utils.txtColor
-import com.example.customlibrary.Utils.txtSize
+import com.example.customlibrary.button.ButtonUtils.txtColor
+import com.example.customlibrary.button.ButtonUtils.txtSize
 
 class LongPrimaryStartIcon(context: Context, attr: AttributeSet) : Buttons(context, attr) {
 
     override fun setNeutral() {
         setBackgroundResource(R.drawable.btn_gredient)
         setIconTintResource(R.color.white)
-        commonAttr(context)
+        commonAttr()
     }
 
     override fun setClicked() {
         setBackgroundResource(R.drawable.btn_clicked)
         setIconTintResource(R.color.white)
-        commonAttr(context)
+        commonAttr()
     }
 
     override fun setDisabled() {
         setBackgroundResource(R.drawable.btn_disabled)
         setIconTintResource(R.color.disabled_text)
-        commonAttr(context, R.color.disabled_text)
+        commonAttr(R.color.disabled_text)
     }
 
-    private fun commonAttr(context: Context, txtColor: Int? = null) {
-        textSize = txtSize(context = context)
+    private fun commonAttr(txtColor: Int? = null) {
+        textSize = txtSize(context = context,sp = ButtonUtils.TextSize.LARGE)
         backgroundTintMode = null
         textAlignment = TEXT_ALIGNMENT_CENTER
         if (txtColor != null) {
@@ -44,8 +44,8 @@ class LongPrimaryStartIcon(context: Context, attr: AttributeSet) : Buttons(conte
             setTextColor(txtColor(context = context, typedArray = typedArray))
         }
         iconGravity = ICON_GRAVITY_TEXT_START
-        iconSize = 52
-        iconPadding = 5
+        iconSize = ButtonUtils.Icon.SIZE
+        iconPadding = ButtonUtils.Icon.PADDING
         ContextThemeWrapper(context, R.style.button1)
         invalidate()
 

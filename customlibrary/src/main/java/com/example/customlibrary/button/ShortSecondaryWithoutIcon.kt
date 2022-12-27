@@ -4,7 +4,6 @@ import android.content.Context
 import android.util.AttributeSet
 import androidx.appcompat.view.ContextThemeWrapper
 import com.example.customlibrary.R
-import com.example.customlibrary.Utils
 import com.example.customlibrary.base.Buttons
 
 class ShortSecondaryWithoutIcon(context: Context, attrs: AttributeSet) : Buttons(context, attrs) {
@@ -26,18 +25,18 @@ class ShortSecondaryWithoutIcon(context: Context, attrs: AttributeSet) : Buttons
     }
 
     private fun commonAttr(txtColor: Int? = null) {
-        textSize = Utils.txtSize(context = context, sp = 40f)
+        textSize = ButtonUtils.txtSize(context = context, sp = ButtonUtils.TextSize.SMALL)
         textAlignment = TEXT_ALIGNMENT_CENTER
         ContextThemeWrapper(context, R.style.button1)
         backgroundTintMode = null
         if (txtColor != null) {
             setTextColor(
-                Utils.txtColor(
+                ButtonUtils.txtColor(
                     color = txtColor, context = context, typedArray = typedArray
                 )
             )
         } else {
-            setTextColor(Utils.txtColor(context = context, typedArray = typedArray))
+            setTextColor(ButtonUtils.txtColor(context = context, typedArray = typedArray))
         }
         invalidate()
     }

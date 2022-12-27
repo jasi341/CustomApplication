@@ -4,7 +4,6 @@ import android.content.Context
 import android.util.AttributeSet
 import androidx.appcompat.view.ContextThemeWrapper
 import com.example.customlibrary.R
-import com.example.customlibrary.Utils
 import com.example.customlibrary.base.Buttons
 
 class LongSecondaryEndIcon(context: Context, attrs: AttributeSet) : Buttons(context, attrs) {
@@ -28,22 +27,20 @@ class LongSecondaryEndIcon(context: Context, attrs: AttributeSet) : Buttons(cont
     }
 
     private fun commonAttr(txtColor: Int? = null) {
-        textSize = Utils.txtSize(context = context, sp = 40f)
+        textSize = ButtonUtils.txtSize(context = context, sp = ButtonUtils.TextSize.SMALL)
         backgroundTintMode = null
         textAlignment = TEXT_ALIGNMENT_CENTER
         iconGravity = ICON_GRAVITY_TEXT_END
-        iconSize = 52
-        iconPadding = 5
+        iconSize = ButtonUtils.Icon.SIZE
+        iconPadding = ButtonUtils.Icon.PADDING
         if (txtColor != null) {
             setTextColor(
-                Utils.txtColor(
-                    color = txtColor,
-                    context = context,
-                    typedArray = typedArray
+                ButtonUtils.txtColor(
+                    color = txtColor, context = context, typedArray = typedArray
                 )
             )
         } else {
-            setTextColor(Utils.txtColor(context = context, typedArray = typedArray))
+            setTextColor(ButtonUtils.txtColor(context = context, typedArray = typedArray))
         }
         ContextThemeWrapper(context, R.style.button1)
         invalidate()
