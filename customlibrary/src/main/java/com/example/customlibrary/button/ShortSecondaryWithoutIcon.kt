@@ -10,18 +10,21 @@ import com.example.customlibrary.base.Buttons
 class ShortSecondaryWithoutIcon(context: Context, attrs: AttributeSet) : Buttons(context, attrs) {
 
     override fun setNeutral() {
-        setBackgroundResource(R.drawable.btn_sec_neutral)
+        setBackgroundResource(R.drawable.btn_sec_short_neutral)
+        elevation = 20f
         commonAttr(R.color.orange)
     }
 
     override fun setClicked() {
-        setBackgroundResource(R.drawable.btn_sec_clicked)
+        setBackgroundResource(R.drawable.btn_sec_short_clicked)
+        elevation = 20f
         commonAttr(R.color.orange)
 
     }
 
     override fun setDisabled() {
-        setBackgroundResource(R.drawable.btn_sec_disabled)
+        background = null
+        backgroundTintMode = null
         commonAttr(R.color.disabled_text)
     }
 

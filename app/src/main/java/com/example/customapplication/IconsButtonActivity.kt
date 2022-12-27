@@ -71,7 +71,7 @@ class IconsButtonActivity : AppCompatActivity() {
             btn25.setNeutral()
             btn26.setClicked()
             btn27.setDisabled()
-            ld8.loadingSecondaryBtn()
+
 
             //secondary Button Short Grey
             btn28.setNeutral()
