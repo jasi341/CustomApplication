@@ -38,5 +38,12 @@
     <!--        app:layout_constraintTop_toBottomOf="@+id/textField"-->
     <!--        app:drawableStartCompat="@drawable/warning" />-->
 
+    <declare-styleable name="Dialog">
+        <attr name="dialogTitle" format="string"/>
+        <attr name="dialogMessage" format="string"/>
+        <attr name="dialogPositiveButton" format="string"/>
+        <attr name="dialogNegativeButton" format="string"/>
+    </declare-styleable>
+
 
 </resources>
