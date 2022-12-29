@@ -43,6 +43,8 @@
         <attr name="dialogMessage" format="string"/>
         <attr name="dialogPositiveButton" format="string"/>
         <attr name="dialogNegativeButton" format="string"/>
+        <attr  name="negativeBtnText" format="string"/>
+        <attr name="dialog_Negative_btn_clickListener" format="reference"/>
     </declare-styleable>
 
 
